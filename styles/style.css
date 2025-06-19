@@ -13,19 +13,22 @@ nav {
   border-radius: 4.5px;
   overflow-x: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
+
+  padding: 0.5rem 0;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  display: inline-flex;
+  gap: 10px;
   list-style: none;
-  gap: 10px;                    /* Abstand zwischen den Links */
+  margin: 0;
+  padding: 0 1rem;
 }
 
 nav ul li {
-  flex: 0 0 auto;   /* Kein Shrinken, kein Grow, Breite nach Inhalt */
+  flex: 0 0 auto;
+  /* Kein Shrinken, kein Grow, Breite nach Inhalt */
 }
 
 nav ul li a {
