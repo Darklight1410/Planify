@@ -15,7 +15,6 @@ const urlsToCache = [
   './scripts/planner.js',
   './scripts/savefiles.js',
   './manifest.json',
-  './app.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './img/icon.ico',
