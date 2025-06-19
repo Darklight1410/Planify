@@ -1,8 +1,13 @@
 const CACHE_NAME = 'planify-v1';
 const urlsToCache = [
   './index.html',
-  './day.html',
-  './import.html',
+  './daily.html',
+  './storage.html',
+  './monthly.html',
+  './about.html',
+  './planer.html',
+  './habit tracker.html',
+  './productivity.html',
   './styles/style.css',
   './scripts/daly.js',
   './scripts/monthly.js',
@@ -10,8 +15,10 @@ const urlsToCache = [
   './scripts/planner.js',
   './scripts/savefiles.js',
   './manifest.json',
+  './app.json',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './img/icon.ico',
 ];
 
 // Install
