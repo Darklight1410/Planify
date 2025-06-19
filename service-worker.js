@@ -9,7 +9,7 @@ const urlsToCache = [
   './habit-tracker.html',
   './productivity.html',
   './styles/style.css',
-  './scripts/daly.js',
+  './scripts/daily.js',
   './scripts/monthly.js',
   './scripts/habit-tracker.js',
   './scripts/planner.js',
