@@ -19,6 +19,8 @@ function generateCalendar() {
     "Januar", "Februar", "März", "April", "Mai", "Juni",
     "Juli", "August", "September", "Oktober", "November", "Dezember"
   ];
+  const weekdays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
 
   monthTitle.textContent = `${monthNames[month]} ${year}`;
 
@@ -34,36 +36,52 @@ function generateCalendar() {
   }
 
   // Tageskästchen mit Events
-for (let day = 1; day <= daysInMonth; day++) {
-  const key = `${year}-${month + 1}-${day}`;
-  const events = JSON.parse(localStorage.getItem(key)) || [];
+  for (let day = 1; day <= daysInMonth; day++) {
+    const key = `${year}-${month + 1}-${day}`;
+    const events = JSON.parse(localStorage.getItem(key)) || [];
+    const date = new Date(year, month, day);
+    const weekdayShort = weekdays[date.getDay()];
 
-  const div = document.createElement("div");
-  div.className = "day";
-  div.addEventListener("click", () => openPopup(day, month, year));
+    const weekdayDiv = document.createElement("div");
+    weekdayDiv.className = "weekday-short";
+    weekdayDiv.textContent = weekdayShort;
+    div.appendChild(weekdayDiv);
 
-  const number = document.createElement("div");
-  number.className = "date-number";
-  number.textContent = day;
-  div.appendChild(number);
+    const div = document.createElement("div");
+    div.className = "day";
+    div.addEventListener("click", () => openPopup(day, month, year));
 
-  if (events.length > 0) {
-    events.forEach(event => {
-      const preview = document.createElement("div");
-      preview.className = "event-preview";
-      preview.textContent = `${event.time} – ${event.text}`;
-      div.appendChild(preview);
-    });
-  } else {
-    const emptyNote = document.createElement("div");
-    emptyNote.className = "event-empty";
-    emptyNote.textContent = "Hier sieht’s aber leer aus...";
-    div.appendChild(emptyNote);
+    const number = document.createElement("div");
+    number.className = "date-number";
+    number.textContent = day;
+    div.appendChild(number);
+
+    if (events.length > 0) {
+      events.forEach(event => {
+        const preview = document.createElement("div");
+        preview.className = "event-preview";
+        preview.textContent = `${event.time} – ${event.text}`;
+        div.appendChild(preview);
+      });
+    } else {
+      const emptyNote = document.createElement("div");
+      emptyNote.className = "event-empty";
+      emptyNote.textContent = "Hier sieht’s aber leer aus...";
+      div.appendChild(emptyNote);
+    }
+
+    calendar.appendChild(div);
   }
 
-  calendar.appendChild(div);
 }
 
+const isToday =
+  day === today.getDate() &&
+  month === today.getMonth() &&
+  year === today.getFullYear();
+
+if (isToday) {
+  div.classList.add("today");
 }
 
 saveBtn.addEventListener("click", () => {
