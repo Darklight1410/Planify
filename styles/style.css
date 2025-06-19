@@ -769,6 +769,7 @@ input[type="text"] {
   body {
     font-size: 0.95rem;
     padding: 0 10px;
+    padding-bottom: 60px;
   }
 
   .Überschrift {
@@ -776,20 +777,19 @@ input[type="text"] {
   }
 
 
-  nav ul {
+    nav {
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    border-top: 1px solid #ccc;
-    border-bottom: none;
+    width: 100%;
     background-color: var(--primary-color);
-    z-index: 999
+    z-index: 999;
+    border-top: 1px solid #ccc;
   }
 
-  nav ul li a {
-    padding: 8px 14px;
-    font-size: 0.95rem;
+  nav ul {
+    justify-content: space-around;
+    padding: 0.5rem;
   }
 
   #calendar-container {
