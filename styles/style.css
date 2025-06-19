@@ -11,24 +11,24 @@ nav {
   background-color: #84a98c;
   border: 4px solid #84a98c;
   border-radius: 4.5px;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
 
+  overflow-x: auto;              /* Horizontal scroll */
+  white-space: nowrap;           /* Kein Umbruch */
+  -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0;
 }
 
 nav ul {
-  display: inline-flex;
-  gap: 10px;
+  display: flex;                 /* Nebeneinander! */
+  flex-wrap: nowrap;            /* Kein Umbrechen */
   list-style: none;
-  margin: 0;
   padding: 0 1rem;
+  margin: 0;
+  gap: 10px;
 }
 
 nav ul li {
-  flex: 0 0 auto;
-  /* Kein Shrinken, kein Grow, Breite nach Inhalt */
+  flex: 0 0 auto;                /* Feste Breite nach Inhalt */
 }
 
 nav ul li a {
@@ -39,7 +39,12 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 4.5px;
   font-family: "Outfit", sans-serif;
-  white-space: nowrap;
+  white-space: nowrap;          /* Kein Umbruch im Linktext */
+}
+
+/* Optional: Scrollbar ausblenden */
+nav::-webkit-scrollbar {
+  display: none;
 }
 
 nav ul li a:hover {
