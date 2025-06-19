@@ -21,7 +21,6 @@ function generateCalendar() {
   ];
   const weekdays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
-
   monthTitle.textContent = `${monthNames[month]} ${year}`;
 
   const firstDay = new Date(year, month, 1).getDay(); // 0 = Sonntag
@@ -29,7 +28,7 @@ function generateCalendar() {
 
   calendar.innerHTML = "";
 
-  // Leere Kästchen vor dem 1. Tag
+  // Leere Kästchen vor dem 1. Tag (Montag als Wochenstart)
   for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
     const empty = document.createElement("div");
     calendar.appendChild(empty);
@@ -42,19 +41,30 @@ function generateCalendar() {
     const date = new Date(year, month, day);
     const weekdayShort = weekdays[date.getDay()];
 
+    const div = document.createElement("div");
+    div.className = "day";
+    div.addEventListener("click", () => openPopup(day, month, year));
+
+    // Kurzer Wochentag oben im Kästchen
     const weekdayDiv = document.createElement("div");
     weekdayDiv.className = "weekday-short";
     weekdayDiv.textContent = weekdayShort;
     div.appendChild(weekdayDiv);
 
-    const div = document.createElement("div");
-    div.className = "day";
-    div.addEventListener("click", () => openPopup(day, month, year));
-
+    // Datum als Zahl
     const number = document.createElement("div");
     number.className = "date-number";
     number.textContent = day;
     div.appendChild(number);
+
+    // Heute hervorheben
+    const isToday =
+      day === today.getDate() &&
+      month === today.getMonth() &&
+      year === today.getFullYear();
+    if (isToday) {
+      div.classList.add("today");
+    }
 
     if (events.length > 0) {
       events.forEach(event => {
@@ -72,16 +82,6 @@ function generateCalendar() {
 
     calendar.appendChild(div);
   }
-
-}
-
-const isToday =
-  day === today.getDate() &&
-  month === today.getMonth() &&
-  year === today.getFullYear();
-
-if (isToday) {
-  div.classList.add("today");
 }
 
 saveBtn.addEventListener("click", () => {
@@ -137,5 +137,3 @@ closeBtn.addEventListener("click", () => {
 });
 
 generateCalendar();
-
-
