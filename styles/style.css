@@ -11,17 +11,16 @@ nav {
   background-color: #84a98c;
   border: 4px solid #84a98c;
   border-radius: 4.5px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
-  display: flex;                 /* Flexbox aktivieren */
-  overflow-x: auto;             /* Horizontal scroll erlauben */
-  white-space: nowrap;          /* Kein Umbruch */
-  -webkit-overflow-scrolling: touch;  /* Smooth Scrolling auf iOS */
+  list-style: none;
   gap: 10px;                    /* Abstand zwischen den Links */
 }
 
@@ -37,8 +36,12 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 4.5px;
   font-family: "Outfit", sans-serif;
+  white-space: nowrap;
 }
 
+nav::-webkit-scrollbar {
+  display: none;
+}
 
 nav ul li a:hover {
   background-color: #a3ceab;
