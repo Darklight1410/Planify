@@ -5,6 +5,7 @@ html {
 body {
   font-family: "Outfit", sans-serif;
   height: 100%;
+  font-size: 1rem; 
 }
 
 nav {
@@ -77,6 +78,7 @@ nav ul li a:hover {
   border-radius: 4.5px;
   padding: 5px;
   text-align: left;
+  font-size: 1rem; 
 }
 
 #textlabelmonthly {
@@ -91,7 +93,7 @@ nav ul li a:hover {
 .Überschrift {
   font-family: "Outfit", sans-serif;
   text-align: center;
-  font-size: xx-large;
+  font-size: 2rem;
   color: #84a98c;
 }
 
@@ -101,7 +103,7 @@ nav ul li a:hover {
   padding: 10px;
   border: none;
   border-radius: 8px;
-  font-size: 25px;
+  font-size: 2rem;
   font-family: "Outfit", sans-serif;
   text-align: center;
 }
@@ -113,7 +115,7 @@ nav ul li a:hover {
   border: 2px solid;
   border-radius: 8px;
   border-color: #84a98c;
-  font-size: 15px;
+  font-size: 1rem;
   font-family: "Outfit", sans-serif;
   text-align: center;
   margin-left: auto;
