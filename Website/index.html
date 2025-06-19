@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planify | Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b82f6" />
+</head>
+
+<body>
+    <header>
+        <nav id="navBar">
+            <ul>
+                <li class="navtitle"><b>Planify</b></li>
+                <li><a class="activeheader" href="index.html">Home</a></li>
+                <li><a href="daily.html">Tagesübersicht</a></li>
+                <li><a href="monthly.html">Kalender</a></li>
+                <li><a href="planer.html">Planer</a></li>
+                <li><a href="habit tracker.html">Habit Tracker</a></li>
+                <li><a href="storage.html">Speichern & Laden</a></li>
+                <li><a href="productivity.html">Produktivität</a></li>
+                <li><a href="about.html">Über uns</a></li>
+        </nav>
+    </header>
+
+    <div class="Überschrift">
+        <h2>
+            Wilkommen bei Planify
+        </h2>
+        <br>
+        <p>
+            Mit Planify kannst du:
+        <div class="text-container">
+            <div class="text-slide">Termine eintragen und im Blick behalten</div>
+            <div class="text-slide">Dir Ziele setzen</div>
+            <div class="text-slide">Dich an Termine erinnern lassen</div>
+            <div class="text-slide">Deine Angewohnheiten tracken</div>
+        </div>
+        <br>
+        Und so gehts:
+        Klicke einfach auf Tagesübersicht wenn du eine genaue Übersicht über einen Tag erhalten willst und auf
+        Kalender um den kompletten Monat im Überblick zu sehen. Du kannst einfach loslegen! Deine Termine,
+        Ziele und Protokolle werden direkt auf deinem Computer gespeichert, du musst nur die Datei
+        erneut herunterladen.
+
+        </p>
+
+        <button class="button" onclick="window.location.href='monthly.html'">Hier Starten</button>
+
+    </div>
+
+<script>
+    if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("scripts/service-worker.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch(err => console.error("SW registration failed:", err));
+}
+
+</script>
+
+</body>
+
+</html>

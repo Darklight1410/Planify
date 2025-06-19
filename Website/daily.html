@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planify | Tagesübersicht</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="navBar">
+            <ul>
+                <li class="navtitle"><b>Planify</b></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="activeheader" href="daily.html">Tagesübersicht</a></li>
+                <li><a href="monthly.html">Kalender</a></li>
+                <li><a href="planer.html">Planer</a></li>
+                <li><a href="habit tracker.html">Habit Tracker</a></li>
+                <li><a href="storage.html">Speichern & Laden</a></li>
+                <li><a href="productivity.html">Produktivität</a></li>
+                <li><a href="about.html">Über uns</a></li>
+
+        </nav>
+    </header>
+
+    <br>
+
+    <div class="day-container">
+        <div class="day-header">
+            <button id="prevDay" class="savebutton"><i class="fas fa-chevron-left"></i></button>
+            <div id="dateDisplay"></div>
+            <button id="nextDay" class="savebutton"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div id="timeDisplay" class="live-time"></div>
+        <h3>Heutige Ereignisse:</h3>
+        <ul id="eventList"></ul>
+
+        <h4 id="countdown">Nächstes Event in: –</h4>
+    </div>
+
+    <script src="scripts/daily.js"></script>
+</body>
+
+<script src="scripts/daily.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planify | Saves</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navBar">
+            <ul>
+                <li class="navtitle"><b>Planify</b></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="daily.html">Tagesübersicht</a></li>
+                <li><a href="monthly.html">Kalender</a></li>
+                <li><a href="planer.html">Planer</a></li>
+                <li><a href="habit tracker.html">Habit Tracker</a></li>
+                <li><a class="activeheader" href="storage.html">Speichern & Laden</a></li>
+                <li><a href="productivity.html">Produktivität</a></li>
+                <li><a href="about.html">Über uns</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Speichere & Lade deine Daten</h2>
+
+        <button id="saveFileBtn" class="savebutton">💾 Als .pfy speichern</button>
+
+        <label for="loadFileInput" class="savebutton">
+            📂 .pfy Datei laden
+        </label>
+        <input type="file" id="loadFileInput" accept=".pfy" style="display: none;" />
+
+        <button id="clearStorageBtn" class="savebutton">🗑️ Deine Daten löschen</button>
+
+    </main>
+
+
+    <div id="loader" class="hidden">
+        <div class="spinner"></div>
+        <p>Datei wird gespeichert...</p>
+    </div>
+
+<script src="scripts/savefiles.js"></script>
+
+</body>
+
+</html>
