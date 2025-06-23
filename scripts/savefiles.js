@@ -38,7 +38,7 @@ document.getElementById("saveFileBtn").addEventListener("click", () => {
 
 
 document.getElementById("loadFileInput").addEventListener("change", (event) => {
-    const file = event.target.files[0];
+    const file = event.target.files[0];loader.classList.remove("hidden");
     if (!file) return;
 
     const reader = new FileReader();
