@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#84a98c" />
 </head>
@@ -36,14 +37,14 @@
     <main>
         <h2>Speichere & Lade deine Daten</h2>
 
-        <button id="saveFileBtn" class="savebutton">💾 Als .pfy speichern</button>
+        <button id="saveFileBtn" class="savebutton"><i class="fa-solid fa-download"></i> Als .pfy speichern</button>
 
         <label for="loadFileInput" class="savebutton">
-            📂 .pfy Datei laden
+            <i class="fa-solid fa-folder-open"></i> .pfy Datei laden
         </label>
         <input type="file" id="loadFileInput" accept=".pfy" style="display: none;" />
 
-        <button id="clearStorageBtn" class="savebutton">🗑️ Deine Daten löschen</button>
+        <button id="clearStorageBtn" class="savebutton"><i class="fa-solid fa-trash"></i> Deine Daten löschen</button>
 
     </main>
 
