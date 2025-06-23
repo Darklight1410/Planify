@@ -69,3 +69,30 @@
                 location.reload(); // Seite neu laden, um Effekt zu sehen
             }
         });
+
+          document.getElementById('check-sw-btn').addEventListener('click', async () => {
+    const statusText = document.getElementById('sw-status');
+
+    if (!('serviceWorker' in navigator)) {
+      statusText.textContent = '❌ Dein Browser unterstützt keine Service Worker.';
+      return;
+    }
+
+    try {
+      const reg = await navigator.serviceWorker.getRegistration();
+      if (!reg) {
+        statusText.textContent = '⚠️ Kein Service Worker registriert.';
+      } else if (reg.installing) {
+        statusText.textContent = '🔄 Service Worker wird gerade installiert...';
+      } else if (reg.waiting) {
+        statusText.textContent = '⏳ Service Worker wartet auf Aktivierung.';
+      } else if (reg.active) {
+        statusText.textContent = '✅ Service Worker ist aktiv!';
+      } else {
+        statusText.textContent = '🤔 Service Worker-Zustand unbekannt.';
+      }
+    } catch (err) {
+      statusText.textContent = '❌ Fehler beim Abrufen des Service Worker-Status.';
+      console.error(err);
+    }
+  });
