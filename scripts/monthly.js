@@ -115,7 +115,7 @@ function openPopup(day, month, year) {
     li.textContent = `${event.time} – ${event.text}`;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "🗑️";
+    deleteBtn.textContent = "<i class="fa-solid fa-trash"></i>";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.addEventListener("click", () => deleteEvent(index));
 
