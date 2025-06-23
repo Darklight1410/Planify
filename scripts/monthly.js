@@ -115,9 +115,15 @@ function openPopup(day, month, year) {
     li.textContent = `${event.time} – ${event.text}`;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "<i class="fa-solid fa-trash"></i>";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.addEventListener("click", () => deleteEvent(index));
+
+    // Icon erstellen
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-trash");
+
+    // Icon dem Button hinzufügen
+    deleteBtn.appendChild(icon);
 
     li.appendChild(deleteBtn);
     popupEventList.appendChild(li);
