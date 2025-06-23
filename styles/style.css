@@ -257,8 +257,8 @@ nav ul li a:hover {
 }
 
 .day.today {
-  border-color: #007bff;
-  background-color: #e6f0ff;
+  border-color: #84a98c;
+  background-color: #cbd8ce;
   font-weight: bold;
 }
 
