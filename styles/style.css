@@ -131,6 +131,7 @@ nav ul li a:hover {
   margin-right: auto;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .savebutton:hover {
@@ -150,6 +151,7 @@ nav ul li a:hover {
   margin-right: auto;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 /*Pias CSS*/
@@ -425,6 +427,22 @@ nav ul li a:hover {
 
 .hidden {
   display: none;
+}
+
+.status-box {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #eef5ec;
+  color: #1b512d;
+  font-weight: 500;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.status-box.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 
