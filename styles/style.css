@@ -256,6 +256,12 @@ nav ul li a:hover {
   max-height: 60px;
 }
 
+.day.today {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+  font-weight: bold;
+}
+
 #popup {
   position: fixed;
   top: 0;
