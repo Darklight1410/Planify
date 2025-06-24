@@ -257,6 +257,9 @@ nav ul li a:hover {
   overflow: hidden;
   text-overflow: hidden;
   max-height: 60px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .day.today {
