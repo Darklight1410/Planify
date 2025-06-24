@@ -1,3 +1,4 @@
+// Von Leevin
 const dateDisplay = document.getElementById("dateDisplay");
 const timeDisplay = document.getElementById("timeDisplay");
 const eventList = document.getElementById("eventList");
