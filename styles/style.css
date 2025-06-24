@@ -318,6 +318,9 @@ nav ul li a:hover {
   resize: none;
   vertical-align: top;
   text-align: left;
+  padding: 8px;
+  resize: vertical;
+  line-height: 1.4;
 }
 
 .text_input:focus {
@@ -329,6 +332,9 @@ nav ul li a:hover {
   resize: none;
   vertical-align: top;
   text-align: left;
+  padding: 8px;
+  resize: vertical;
+  line-height: 1.4;
 }
 
 .text_input-time {
