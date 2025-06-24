@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap"
         rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json"> 
     <meta name="theme-color" content="#84a98c" />
 </head>
 
@@ -39,6 +39,7 @@
         <br>
         <p>
             Mit Planify kannst du:
+            <!-- Slide Animation -->
         <div class="text-container">
             <div class="text-slide">Termine eintragen und im Blick behalten</div>
             <div class="text-slide">Dir Ziele setzen</div>
@@ -51,25 +52,26 @@
         Kalender um den kompletten Monat im Überblick zu sehen.
         <br>
         <p class="Überschrift">
-        Du kannst einfach loslegen!
+            Du kannst einfach loslegen!
         </p>
         Deine Termine,
-        Ziele und Protokolle werden direkt auf deinem Computer oder Mobilgerät gespeichert, du musst nur die Datei herunterladen.
+        Ziele und Protokolle werden direkt auf deinem Computer oder Mobilgerät gespeichert, du musst nur die Datei
+        herunterladen.
         </p>
 
         <button class="button" onclick="window.location.href='monthly.html'">Hier Starten</button>
 
     </div>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(reg => console.log('✅ Service Worker registriert:', reg))
-        .catch(err => console.error('❌ Service Worker konnte nicht registriert werden:', err));
-    });
-  }
-</script>
+    <!-- Devlog -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('✅ Service Worker registriert:', reg))
+                    .catch(err => console.error('❌ Service Worker konnte nicht registriert werden:', err));
+            });
+        }
+    </script>
 
 
 </body>
