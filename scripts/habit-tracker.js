@@ -1,3 +1,4 @@
+// von Mia
 const startDate = new Date("2024-12-30"); // Start mit Montag vor 01.01.2025
 const endDate = new Date("2026-01-04");   // Sonntag nach 31.12.2025
 

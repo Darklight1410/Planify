@@ -1,3 +1,4 @@
+// von Leevin
 const calendar = document.getElementById("calendar");
 const monthTitle = document.getElementById("month-title");
 const popup = document.getElementById("popup");
@@ -57,7 +58,7 @@ function generateCalendar() {
     number.textContent = day;
     div.appendChild(number);
 
-    // Heute hervorheben
+    // Heute hervorheben, von Jule
     const isToday =
       day === today.getDate() &&
       month === today.getMonth() &&
@@ -84,6 +85,7 @@ function generateCalendar() {
   }
 }
 
+// von Leevin
 saveBtn.addEventListener("click", () => {
   const time = eventTime.value;
   const text = eventText.value.trim();
@@ -130,6 +132,7 @@ function openPopup(day, month, year) {
   });
 }
 
+// von Jule
 function deleteEvent(index) {
   const events = JSON.parse(localStorage.getItem(selectedDate)) || [];
   events.splice(index, 1); // Event an Index löschen
