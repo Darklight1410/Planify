@@ -1,12 +1,13 @@
 // von Mia
 // Ein Objekt, das den aktuellen Zustand des Planers speichert.
 const Planner = {
-  lists: [],
+  lists: JSON.parse(localStorage.getItem("plannerLists")) || [],
 
   // Liste erstellen
   addList(title) {
     if (title) {
       this.lists.push({ title, todos: [] });
+      this.save();
       renderGallery(); // Nach dem Hinzufügen wird die Ansicht aktualisiert
     }
   },
@@ -14,12 +15,14 @@ const Planner = {
   // Liste löschen
   deleteList(index) {
     this.lists.splice(index, 1);
+    this.save();
     renderGallery(); // Nach dem Löschen wird die Ansicht aktualisiert
   },
 
   // To-Do hinzufügen
   addTodo(listIndex, text) {
     this.lists[listIndex].todos.push({ text, done: false });
+    this.save();
     renderGallery(); // Galerie nach dem Hinzufügen neu rendern
     renderTodos(listIndex); // Todo-Liste auch neu rendern
   },
@@ -28,6 +31,7 @@ const Planner = {
   toggleTodo(listIndex, todoIndex) {
     const todo = this.lists[listIndex].todos[todoIndex];
     todo.done = !todo.done;
+    this.save();
     renderTodos(listIndex); // Nach der Änderung wird die Liste aktualisiert
   },
 
@@ -39,6 +43,11 @@ const Planner = {
   // Alle Listen zurückgeben
   getLists() {
     return this.lists;
+  },
+
+  // Speichern in localStorage
+  save() {
+    localStorage.setItem("plannerLists", JSON.stringify(this.lists));
   }
 };
 
