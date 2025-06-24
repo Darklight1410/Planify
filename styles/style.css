@@ -14,18 +14,14 @@ nav {
   border-radius: 4.5px;
 
   overflow-x: auto;
-  /* Horizontal scroll */
   white-space: nowrap;
-  /* Kein Umbruch */
   -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0;
 }
 
 nav ul {
   display: flex;
-  /* Nebeneinander! */
   flex-wrap: nowrap;
-  /* Kein Umbrechen */
   list-style: none;
   padding: 0 1rem;
   margin: 0;
@@ -34,7 +30,6 @@ nav ul {
 
 nav ul li {
   flex: 0 0 auto;
-  /* Feste Breite nach Inhalt */
 }
 
 nav ul li a {
@@ -46,10 +41,7 @@ nav ul li a {
   border-radius: 4.5px;
   font-family: "Outfit", sans-serif;
   white-space: nowrap;
-  /* Kein Umbruch im Linktext */
 }
-
-/* Optional: Scrollbar ausblenden */
 nav::-webkit-scrollbar {
   display: none;
 }
@@ -154,7 +146,7 @@ nav ul li a:hover {
   white-space: nowrap;
 }
 
-/*Pias CSS*/
+/*Pia CSS Anis*/
 
 .index-container {
   display: flex;
@@ -262,7 +254,7 @@ nav ul li a:hover {
   margin-top: 5px;
   color: #84a98c;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: hidden;
   max-height: 60px;
 }
 
@@ -391,7 +383,7 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* CSS für Storage */
+/* Storage */
 
 #loader {
   position: fixed;
@@ -446,7 +438,7 @@ nav ul li a:hover {
 }
 
 
-/* Mias Css Planer */
+/* Planer */
 body {
   font-family: 'Outfit', sans-serif;
   background: #f4f6f8;
@@ -587,23 +579,20 @@ h1 {
   justify-content: center;
 }
 
-/* Jede Liste als Karte */
+/* Listen als Karte */
 .list-card {
   background: white;
   padding: 20px;
   width: calc(50% - 20px);
-  /* 2 Listen nebeneinander, mit etwas Abstand */
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease;
   box-sizing: border-box;
-  /* Verhindert Overflow */
   height: auto;
 }
 
-/* Hover-Effekt für die Karten */
 .list-card:hover {
   transform: scale(1.05);
 }
@@ -621,10 +610,8 @@ h1 {
   font-size: 14px;
   margin-top: 10px;
   height: 60px;
-  /* Maximale Höhe der Vorschau */
   overflow: hidden;
   text-overflow: ellipsis;
-  /* Zeigt "..." an, wenn der Text zu lang ist */
 }
 
 /* Löschen-Button */
@@ -828,7 +815,6 @@ input[type="text"] {
 
   #calendar {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 Tage pro Zeile */
     gap: 10px;
   }
 
@@ -880,3 +866,5 @@ input[type="text"] {
     font-size: 1.2em;
   }
 }
+
+/* Momentan fehlen noch kompabilitätsanpassungen für Tablets*/
