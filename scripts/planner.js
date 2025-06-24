@@ -1,3 +1,4 @@
+// von Mia
 // Ein Objekt, das den aktuellen Zustand des Planers speichert.
 const Planner = {
   lists: [],

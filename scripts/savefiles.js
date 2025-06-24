@@ -1,6 +1,7 @@
+// von Justus
 document.getElementById("saveFileBtn").addEventListener("click", () => {
     const loader = document.getElementById("loader");
-
+    // Lade Animation
     const messages = [
         "Termine werden verschlüsselt...",
         "Daten werden gesichert...",
@@ -62,6 +63,7 @@ document.getElementById("loadFileInput").addEventListener("change", (event) => {
     reader.readAsText(file);
 });
 
+// Leert den LocalStorage
 document.getElementById("clearStorageBtn").addEventListener("click", () => {
     if (confirm("Bist du sicher, dass du alle gespeicherten Daten löschen willst?")) {
         localStorage.clear();
@@ -70,6 +72,7 @@ document.getElementById("clearStorageBtn").addEventListener("click", () => {
     }
 });
 
+// Überprüft Funktionalität des Service Workers, Leevin
 document.getElementById('check-sw-btn').addEventListener('click', async () => {
     if (!('serviceWorker' in navigator)) {
         showSWStatus('❌ Dein Browser unterstützt keine Service Worker.', true);
@@ -95,6 +98,7 @@ document.getElementById('check-sw-btn').addEventListener('click', async () => {
     }
 });
 
+// Rückmeldung erstellen
 function showSWStatus(message, isError = false) {
     const box = document.getElementById('sw-status');
     box.textContent = message;
