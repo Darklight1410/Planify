@@ -576,7 +576,7 @@ h1 {
   resize: none;
 }
 
-#newTodoInput.focus {
+#newTodoInput:focus {
   width: calc(100% - 100px);
   padding: 10px;
   margin-top: 15px;
